@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">EaziPay</string>
+
+    <!--Login-->
+    <string name="login">Login</string>
+    <string name="phone_label">Phone:</string>
+    <string name="password_label">Password:</string>
+    <string name="register_new_account">Not Signed up yet?</string>
+    <string name="phone_placeholder">Enter Phone Number</string>
+    <string name="pass_placeholder">Enter Password</string>
+    <string name="register">Register</string>
+
+    <!--Register-->
+    <string name="merchant_name">Merchant Name:</string>
+    <string name="placeholder_merchant_name">Enter Merchant Name</string>
+    <string name="business_name">Business Name (Optional):</string>
+    <string name="placeholder_business_name">Enter Business Name</string>
+    <string name="mobile_no">Mobile No.:</string>
+    <string name="placeholder_mobile_no">Enter Mobile No.</string>
+    <string name="email_address">Email Address (Optional):</string>
+    <string name="placeholder_email_address">Enter Email Address</string>
+    <string name="password">Password:</string>
+    <string name="placeholder_password">Enter Your Password</string>
+    <string name="conf_password">Confirm Password:</string>
+    <string name="placeholder_conf_password">Confirm Password</string>
+    <string name="have_account">Already Registered?</string>
+
+
+    <!--Buttons-->
+    <string name="submit">Submit</string>
+    <string name="title_activity_home_screen">home_screen</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!--Home Screen-->
+    <string name="welcome_message">Hi Becky!</string>
+    <string name="total_received">Total received</string>
+    <string name="amount_figures">N40,000</string>
+    <string name="count">Count: 6</string>
+    <string name="receive_payment">Receive\nPayment</string>
+    <string name="disburse_payment">Disburse\nPayment</string>
+    <string name="view_reports">VIEW REPORTS</string>
+
+
+    <!--Receive Activity -->
+    <string name="product_service">Product/Service:</string>
+    <string name="placeholder_product_service">Enter Product or Service</string>
+    <string name="amount">Amount:</string>
+    <string name="placeholder_amount">Enter Amount</string>
+    <string name="bank">Bank:</string>
+    <string name="select_bank">Select Bank</string>
+    <string name="account_type">Account Type:</string>
+    <string name="phone">Account Phone Number:</string>
+    <string name="continue_txt">Continue</string>
+
+    <!--Banks-->
+    <string name="gtb">GT Bank</string>
+    <string name="access">Access Bank</string>
+    <string name="zenith">Zenith Bank</string>
+    <string name="first">First Bank</string>
+
+    <!--Account Types-->
+    <string name="savings">Savings</string>
+    <string name="current">Current</string>
+    <string name="fixed">Fixed</string>
+
+    <!--OTP Dialog-->
+    <string name="otp_notice">An OTP has been sent to your Mobile Number, Please Input Here:</string>
+    <string name="placeholder_otp">Enter OTP</string>
+
+</resources>

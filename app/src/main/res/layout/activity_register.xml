@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="35dp">
+
+        <!--Header-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:textSize="40sp"
+            android:layout_marginBottom="15dp"/>
+
+        <!--Phone Input-->
+        <TextView
+            style="@style/formLabel"
+            android:layout_gravity="top"
+            android:text="@string/merchant_name"            />
+        <EditText
+            style="@style/inputText"
+            android:hint="@string/placeholder_merchant_name"
+            android:inputType="text"
+            android:layout_marginBottom="8dp"/>
+
+        <!--Password Input-->
+        <TextView
+            style="@style/formLabel"
+            android:text="@string/business_name" />
+
+        <EditText
+            style="@style/inputText"
+            android:hint="@string/placeholder_business_name"
+            android:inputType="textPassword"
+            android:layout_marginBottom="8dp"/>
+
+        <!--Email Input-->
+        <TextView
+            style="@style/formLabel"
+            android:text="@string/email_address" />
+
+        <EditText
+            style="@style/inputText"
+            android:hint="@string/placeholder_email_address"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="8dp"/>
+
+        <!--Password Input-->
+        <TextView
+            style="@style/formLabel"
+            android:text="@string/password_label" />
+
+        <EditText
+            style="@style/inputText"
+            android:hint="@string/placeholder_password"
+            android:inputType="textPassword"
+            android:layout_marginBottom="8dp"/>
+
+        <!--Password Input-->
+        <TextView
+            style="@style/formLabel"
+            android:text="@string/conf_password" />
+
+        <EditText
+            style="@style/inputText"
+            android:hint="@string/placeholder_conf_password"
+            android:inputType="textPassword"
+            android:layout_marginBottom="8dp"/>
+
+        <!--Submit-->
+        <Button
+            style="@style/submitButton"
+            android:text="@string/register"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="right"/>
+
+        <!--Register Section-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/have_account" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/colorAccent"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@drawable/rect"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

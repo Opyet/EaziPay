@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReceivePaymentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="35dp">
+
+        <!--Receive Payment form-->
+        <TextView
+            style="@style/formLabel"
+            android:layout_gravity="top"
+            android:text="@string/product_service"            />
+        <EditText
+            style="@style/inputText"
+            android:hint="@string/placeholder_product_service"
+            android:inputType="text"
+            android:layout_marginBottom="8dp"/>
+
+        <!--Amount Input-->
+        <TextView
+            style="@style/formLabel"
+            android:text="@string/amount" />
+
+        <EditText
+            style="@style/inputText"
+            android:hint="@string/placeholder_amount"
+            android:inputType="textPassword"
+            android:layout_marginBottom="8dp"/>
+
+        <!--Bank Input-->
+        <TextView
+            style="@style/formLabel"
+            android:text="@string/bank" />
+
+        <EditText
+            style="@style/inputText"
+            android:hint="@string/select_bank"
+            android:inputType="text"
+            android:layout_marginBottom="8dp"/>
+
+        <!--Account Input-->
+        <TextView
+            style="@style/formLabel"
+            android:text="@string/account_type" />
+
+        <EditText
+            style="@style/inputText"
+            android:hint="@string/savings"
+            android:inputType="textPassword"
+            android:layout_marginBottom="8dp"/>
+
+        <!--Phone Input-->
+        <TextView
+            style="@style/formLabel"
+            android:text="@string/phone" />
+
+        <EditText
+            style="@style/inputText"
+            android:hint="@string/phone_placeholder"
+            android:inputType="textPassword"
+            android:layout_marginBottom="8dp"/>
+
+        <!--Submit-->
+        <Button
+            style="@style/submitButton"
+            android:text="@string/continue_txt"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="right"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@drawable/rect"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

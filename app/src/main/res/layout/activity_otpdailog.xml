@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="10dp"
+    tools:context=".OTPDailogActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="@color/textDarkGrey"
+        android:layout_height="wrap_content"
+        android:text="@string/otp_notice"
+        android:textAlignment="center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        android:hint="@string/placeholder_otp"/>
+    <Button
+        style="@style/submitButton"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="10dp"
+        android:text="@string/continue_txt"
+        android:layout_gravity="right"/>
+</LinearLayout>
