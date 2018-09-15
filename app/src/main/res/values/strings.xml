@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">EaziPay</string>
 
+    <string name="customer">Customer</string>
+    <string name="merchant">Merchant</string>
     <!--Login-->
     <string name="login">Login</string>
     <string name="phone_label">Phone:</string>
@@ -12,7 +14,8 @@
 
     <!--Register-->
     <string name="merchant_name">Merchant Name:</string>
-    <string name="placeholder_merchant_name">Enter Merchant Name</string>
+    <string name="placeholder_surname">Surname</string>
+    <string name="placeholder_othernames">Other names</string>
     <string name="business_name">Business Name (Optional):</string>
     <string name="placeholder_business_name">Enter Business Name</string>
     <string name="mobile_no">Mobile No.:</string>
@@ -35,7 +38,8 @@
     <string name="welcome_message">Hi Becky!</string>
     <string name="total_received">Total received</string>
     <string name="amount_figures">N40,000</string>
-    <string name="count">Count: 6</string>
+    <string name="count">Count: </string>
+    <string name="count_number">6</string>
     <string name="receive_payment">Receive\nPayment</string>
     <string name="disburse_payment">Disburse\nPayment</string>
     <string name="view_reports">VIEW REPORTS</string>
@@ -66,5 +70,28 @@
     <!--OTP Dialog-->
     <string name="otp_notice">An OTP has been sent to your Mobile Number, Please Input Here:</string>
     <string name="placeholder_otp">Enter OTP</string>
+
+    <!--Success/Failed Activities-->
+    <string name="success">Success!</string>
+    <string name="report">Report</string>
+    <string name="failed">Failed!</string>
+    <string name="transaction_id">Transaction ID: </string>
+    <string name="transaction_number">AGS1027930DG</string>
+    <string name="transaction_not_completed">Transaction Not Completed!</string>
+    <string name="network_error">Network Error</string>
+    <string name="bank_not_reached">Bank Not Reached</string>
+    <string name="insufficient_funds">Insufficient Funds</string>
+    <string name="back_to_home">Back to Home</string>
+
+    <!--Offline/Online-->
+    <string name="offline">Offline Mode</string>
+    <string name="online">Online Mode</string>
+
+    <!--Disburse Screen-->
+    <string name="total_balance">Balance</string>
+    <string name="transfer">Transfer</string>
+    <string name="account_number">Account Number</string>
+    <string name="account_name">Account Name:</string>
+    <string name="placeholder_account_name">Firstname Surname</string>
 
 </resources>

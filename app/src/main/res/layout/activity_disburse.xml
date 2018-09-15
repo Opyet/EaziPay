@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReceivePaymentActivity">
+    tools:context=".DisburseActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,9 +30,45 @@
                 android:layout_marginLeft="10dp"/>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/border_text"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_balance"
+                android:textStyle="bold"
+                android:textColor="@color/textLightGrey"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:background="@drawable/border_text"
+                android:padding="7dp"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amount_figures"
+            android:textColor="@color/colorAccent2"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="-6dp"
+            android:textSize="40sp"/>
+
+
         <!--Receive Payment form-->
         <TextView
-            style="@style/formLabel"
+            style="@style/formLabel2"
             android:layout_gravity="top"
             android:text="@string/product_service"            />
         <EditText
@@ -43,13 +79,13 @@
 
         <!--Amount Input-->
         <TextView
-            style="@style/formLabel"
+            style="@style/formLabel2"
             android:text="@string/amount" />
 
         <EditText
             style="@style/inputText"
             android:hint="@string/placeholder_amount"
-            android:inputType="textPassword"
+            android:inputType="numberDecimal"
             android:layout_marginBottom="8dp"/>
 
         <LinearLayout
@@ -64,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
-                    style="@style/formLabel"
+                    style="@style/formLabel2"
                     android:text="@string/bank" />
 
                 <EditText
@@ -81,33 +117,34 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
-                    style="@style/formLabel"
-                    android:text="@string/account_type" />
+                    style="@style/formLabel2"
+                    android:text="@string/account_number" />
 
                 <EditText
                     style="@style/inputText"
                     android:hint="@string/savings"
-                    android:inputType="textPassword"
+                    android:inputType="numberSigned"
                     android:layout_marginBottom="8dp"/>
             </LinearLayout>
         </LinearLayout>
-        <!--Phone Input-->
+
+        <!--Account name Input-->
         <TextView
-            style="@style/formLabel"
-            android:text="@string/phone" />
+            style="@style/formLabel2"
+            android:text="@string/account_name" />
 
         <EditText
             style="@style/inputText"
-            android:hint="@string/phone_placeholder"
-            android:inputType="textPassword"
+            android:hint="@string/placeholder_account_name"
+            android:inputType="text"
             android:layout_marginBottom="8dp"/>
 
         <!--Submit-->
         <Button
             style="@style/submitButton"
-            android:text="@string/continue_txt"
+            android:text="@string/transfer"
             android:textColor="@color/white"
-            android:background="@color/colorAccent"
+            android:background="@color/colorAccent2"
             android:layout_marginTop="10dp"
             android:layout_gravity="right"/>
 
@@ -115,7 +152,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="20dp"
-        android:background="@drawable/rect"
+        android:background="@color/colorAccent2"
         android:layout_gravity="bottom"
         android:layout_alignParentBottom="true"/>
 
