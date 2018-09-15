@@ -10,4 +10,7 @@
 
     <color name="white">#ffffff</color>
 
+    <color name="successGreen">#4ad201</color>
+    <color name="failedRed">#cf0700</color>
+
 </resources>

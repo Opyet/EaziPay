@@ -27,7 +27,9 @@
             android:name=".HomeScreenActivity"
             android:label="@string/title_activity_home_screen" />
         <activity android:name=".ReceivePaymentActivity" />
-        <activity android:name=".OTPDailogActivity"></activity>
+        <activity android:name=".OTPDailogActivity" />
+        <activity android:name=".SuccessReportActivity" />
+        <activity android:name=".FailedReportActivity"></activity>
     </application>
 
 </manifest>
