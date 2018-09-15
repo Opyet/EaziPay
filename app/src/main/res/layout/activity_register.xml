@@ -30,12 +30,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <EditText
+                android:id="@+id/txtSurname"
                 style="@style/inputText"
                 android:hint="@string/placeholder_surname"
                 android:inputType="text"
                 android:layout_weight="3"
                 android:layout_marginBottom="8dp"/>
             <EditText
+                android:id="@+id/txtOtherNames"
                 style="@style/inputText"
                 android:layout_marginLeft="6dp"
                 android:layout_weight="2"
@@ -50,6 +52,7 @@
             android:text="@string/business_name" />
 
         <EditText
+            android:id="@+id/txtBizname"
             style="@style/inputText"
             android:hint="@string/placeholder_business_name"
             android:inputType="text"
@@ -61,6 +64,7 @@
             android:text="@string/mobile_no" />
 
         <EditText
+            android:id="@+id/txtMobileNo"
             style="@style/inputText"
             android:hint="@string/placeholder_mobile_no"
             android:inputType="number"
@@ -72,6 +76,7 @@
             android:text="@string/email_address" />
 
         <EditText
+            android:id="@+id/txtEmail"
             style="@style/inputText"
             android:hint="@string/placeholder_email_address"
             android:inputType="textEmailAddress"
@@ -92,6 +97,7 @@
                     android:text="@string/password_label" />
 
                 <EditText
+                    android:id="@+id/txtPwd1"
                     style="@style/inputText"
                     android:hint="@string/placeholder_password"
                     android:inputType="textPassword"
@@ -109,6 +115,7 @@
                     android:text="@string/conf_password" />
 
                 <EditText
+                    android:id="@+id/txtPwd2"
                     style="@style/inputText"
                     android:hint="@string/placeholder_conf_password"
                     android:inputType="textPassword"
@@ -135,6 +142,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/have_account" />
                 <TextView
+                    android:id="@+id/bttnLogin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/login"
@@ -146,6 +154,7 @@
 
             <!--Submit-->
             <Button
+                android:id="@+id/bttnRegister"
                 style="@style/submitButton"
                 android:layout_alignParentRight="true"
                 android:text="@string/register"

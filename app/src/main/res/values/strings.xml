@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">EaziPay</string>
 
-    <string name="customer">Customer</string>
+    <string name="customer">Customer Signup</string>
     <string name="merchant">Merchant</string>
     <!--Login-->
     <string name="login">Login</string>
@@ -111,6 +111,6 @@
     <string name="placeholder_card_phone">Enter Accessible Phone Number</string>
     <string name="yesterday">Yesterday</string>
 
-
+    <string name="this_week">This Week</string>
 
 </resources>

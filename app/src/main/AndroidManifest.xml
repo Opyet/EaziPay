@@ -14,6 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
@@ -42,7 +43,9 @@
             android:label="@string/report" />
         <activity android:name=".DisburseActivity" />
         <activity android:name=".HistoryActivity" />
-        <activity android:name=".RegisterCustomerActivity"></activity>
+        <activity android:name=".RegisterCustomerActivity" />
+        <activity android:name=".SplashLayout"
+            ></activity>
     </application>
 
 </manifest>

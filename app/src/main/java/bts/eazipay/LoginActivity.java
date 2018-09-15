@@ -52,13 +52,13 @@ public class LoginActivity extends AppCompatActivity {
                     txtPassword = (EditText)findViewById(R.id.txtPassword);
                     String mobile=txtMobile.getText().toString().trim();
                     String pwd=txtPassword.getText().toString().trim();
-                    if (mobile.length()<7 || pwd.length()<6) {
+                   /* if (mobile.length()<7 || pwd.length()<6) {
 
                         return;
-                    }
+                    }*/
                     ///TODO
                     Intent frmIntent =new Intent();
-                    frmIntent.setClass(LoginActivity.this , MainActivity.class );
+                    frmIntent.setClass(LoginActivity.this , HomeScreenActivity.class );
                     startActivity(frmIntent);
                     finish();
                     android.os.Process.killProcess(android.os.Process.myPid());
