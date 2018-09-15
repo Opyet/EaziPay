@@ -14,22 +14,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/login" />
         <activity android:name=".RegisterActivity" />
         <activity
             android:name=".HomeScreenActivity"
             android:label="@string/title_activity_home_screen" />
-        <activity android:name=".ReceivePaymentActivity" />
+        <activity
+            android:name=".ReceivePaymentActivity"
+            android:label="@string/receive_payment" />
         <activity android:name=".OTPDailogActivity" />
-        <activity android:name=".SuccessReportActivity" />
-        <activity android:name=".FailedReportActivity"></activity>
+        <activity
+            android:name=".SuccessReportActivity"
+            android:label="@string/report" />
+        <activity
+            android:name=".FailedReportActivity"
+            android:label="@string/report" />
+        <activity android:name=".DisburseActivity" />
+        <activity android:name=".HistoryActivity"></activity>
     </application>
 
 </manifest>

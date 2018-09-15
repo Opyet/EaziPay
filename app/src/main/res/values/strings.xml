@@ -12,7 +12,8 @@
 
     <!--Register-->
     <string name="merchant_name">Merchant Name:</string>
-    <string name="placeholder_merchant_name">Enter Merchant Name</string>
+    <string name="placeholder_surname">Surname</string>
+    <string name="placeholder_othernames">Other names</string>
     <string name="business_name">Business Name (Optional):</string>
     <string name="placeholder_business_name">Enter Business Name</string>
     <string name="mobile_no">Mobile No.:</string>
@@ -70,6 +71,7 @@
 
     <!--Success/Failed Activities-->
     <string name="success">Success!</string>
+    <string name="report">Report</string>
     <string name="failed">Failed!</string>
     <string name="transaction_id">Transaction ID: </string>
     <string name="transaction_number">AGS1027930DG</string>
@@ -82,4 +84,12 @@
     <!--Offline/Online-->
     <string name="offline">Offline Mode</string>
     <string name="online">Online Mode</string>
+
+    <!--Disburse Screen-->
+    <string name="total_balance">Balance</string>
+    <string name="transfer">Transfer</string>
+    <string name="account_number">Account Number</string>
+    <string name="account_name">Account Name:</string>
+    <string name="placeholder_account_name">Firstname Surname</string>
+
 </resources>
