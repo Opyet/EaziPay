@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">EaziPay</string>
 
+    <string name="customer">Customer</string>
+    <string name="merchant">Merchant</string>
     <!--Login-->
     <string name="login">Login</string>
     <string name="phone_label">Phone:</string>
