@@ -16,8 +16,8 @@
     <string name="merchant_name">Merchant Name:</string>
     <string name="placeholder_surname">Surname</string>
     <string name="placeholder_othernames">Other names</string>
-    <string name="business_name">Business Name (Optional):</string>
-    <string name="placeholder_business_name">Enter Business Name</string>
+    <string name="business_name">Business Name:</string>
+    <string name="placeholder_business_name">Enter Business Name (optional)</string>
     <string name="mobile_no">Mobile No.:</string>
     <string name="placeholder_mobile_no">Enter Mobile No.</string>
     <string name="email_address">Email (Optional):</string>
