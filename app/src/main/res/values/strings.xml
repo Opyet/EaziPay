@@ -20,18 +20,18 @@
     <string name="placeholder_business_name">Enter Business Name</string>
     <string name="mobile_no">Mobile No.:</string>
     <string name="placeholder_mobile_no">Enter Mobile No.</string>
-    <string name="email_address">Email Address (Optional):</string>
+    <string name="email_address">Email (Optional):</string>
     <string name="placeholder_email_address">Enter Email Address</string>
     <string name="password">Password:</string>
-    <string name="placeholder_password">Enter Your Password</string>
-    <string name="conf_password">Confirm Password:</string>
-    <string name="placeholder_conf_password">Confirm Password</string>
+    <string name="placeholder_password">Enter Password</string>
+    <string name="conf_password">Confirm Pass:</string>
+    <string name="placeholder_conf_password">Password Again</string>
     <string name="have_account">Already Registered?</string>
 
 
     <!--Buttons-->
     <string name="submit">Submit</string>
-    <string name="title_activity_home_screen">home_screen</string>
+    <string name="title_activity_home_screen">Home Screen</string>
     <string name="title_activity_login">Sign in</string>
 
     <!--Home Screen-->
@@ -93,5 +93,22 @@
     <string name="account_number">Account Number</string>
     <string name="account_name">Account Name:</string>
     <string name="placeholder_account_name">Firstname Surname</string>
+
+    <!--Customer Registration-->
+    <string name="card_number">CARD NUMBER:</string>
+    <string name="placeholder_card_number">Card Number</string>
+    <string name="card_holder">CARD HOLDER:</string>
+    <string name="placeholder_card_holder">Enter Name On Card</string>
+    <string name="expiry_date">VALID UNTIL:</string>
+    <string name="cvv">CVV</string>
+    <string name="placeholder_cvv">xxx</string>
+    <string name="last_three">Last three digit on your card\'s backside</string>
+    <string name="phone_validation_message">This phone number will be used for validating your registration</string>
+    <string name="card_month">MM</string>
+    <string name="card_year">YY</string>
+    <string name="slash">/</string>
+    <string name="placeholder_card_phone">Enter Accessible Phone Number</string>
+
+
 
 </resources>

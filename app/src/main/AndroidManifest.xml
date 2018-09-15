@@ -41,7 +41,8 @@
             android:name=".FailedReportActivity"
             android:label="@string/report" />
         <activity android:name=".DisburseActivity" />
-        <activity android:name=".HistoryActivity"></activity>
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".RegisterCustomerActivity"></activity>
     </application>
 
 </manifest>

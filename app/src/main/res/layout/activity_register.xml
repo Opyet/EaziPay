@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="35dp">
+        android:padding="30dp">
 
         <!--Header-->
         <TextView
@@ -44,7 +44,7 @@
                 android:layout_marginBottom="8dp"/>
         </LinearLayout>
 
-        <!--Password Input-->
+        <!--Business Name Input-->
         <TextView
             style="@style/formLabel"
             android:text="@string/business_name" />
@@ -52,7 +52,18 @@
         <EditText
             style="@style/inputText"
             android:hint="@string/placeholder_business_name"
-            android:inputType="textPassword"
+            android:inputType="text"
+            android:layout_marginBottom="8dp"/>
+
+        <!--Business Name Input-->
+        <TextView
+            style="@style/formLabel"
+            android:text="@string/mobile_no" />
+
+        <EditText
+            style="@style/inputText"
+            android:hint="@string/placeholder_mobile_no"
+            android:inputType="number"
             android:layout_marginBottom="8dp"/>
 
         <!--Email Input-->
@@ -66,57 +77,85 @@
             android:inputType="textEmailAddress"
             android:layout_marginBottom="8dp"/>
 
-        <!--Password Input-->
-        <TextView
-            style="@style/formLabel"
-            android:text="@string/password_label" />
-
-        <EditText
-            style="@style/inputText"
-            android:hint="@string/placeholder_password"
-            android:inputType="textPassword"
-            android:layout_marginBottom="8dp"/>
-
-        <!--Password Input-->
-        <TextView
-            style="@style/formLabel"
-            android:text="@string/conf_password" />
-
-        <EditText
-            style="@style/inputText"
-            android:hint="@string/placeholder_conf_password"
-            android:inputType="textPassword"
-            android:layout_marginBottom="8dp"/>
-
-        <!--Submit-->
-        <Button
-            style="@style/submitButton"
-            android:text="@string/register"
-            android:background="@color/colorAccent"
-            android:textColor="@color/white"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="right"/>
-
-        <!--Register Section-->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp">
-            <TextView
-                android:layout_width="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="@string/have_account" />
-            <TextView
-                android:layout_width="wrap_content"
+                android:orientation="vertical">
+                <!--Password Input-->
+                <TextView
+                    style="@style/formLabel"
+                    android:text="@string/password_label" />
+
+                <EditText
+                    style="@style/inputText"
+                    android:hint="@string/placeholder_password"
+                    android:inputType="textPassword"
+                    android:layout_marginBottom="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="@string/login"
-                android:textStyle="bold"
-                android:layout_marginLeft="5dp"
-                android:textColor="@color/colorAccent"/>
+                android:orientation="vertical">
+                <!-- Confirm Password Input-->
+                <TextView
+                    style="@style/formLabel"
+                    android:text="@string/conf_password" />
+
+                <EditText
+                    style="@style/inputText"
+                    android:hint="@string/placeholder_conf_password"
+                    android:inputType="textPassword"
+                    android:layout_marginBottom="8dp"/>
+            </LinearLayout>
 
         </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <!--Register Section-->
+            <LinearLayout
+                android:id="@+id/login_alternative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:layout_marginTop="0dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/have_account" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/colorAccent"/>
+
+            </LinearLayout>
+
+            <!--Submit-->
+            <Button
+                style="@style/submitButton"
+                android:layout_alignParentRight="true"
+                android:text="@string/register"
+                android:background="@color/colorAccent"
+                android:textColor="@color/white"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="end"/>
+
+        </RelativeLayout>
+
     </LinearLayout>
     <View
         android:layout_width="match_parent"
