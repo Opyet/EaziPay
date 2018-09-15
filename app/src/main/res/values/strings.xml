@@ -107,7 +107,9 @@
     <string name="card_month">MM</string>
     <string name="card_year">YY</string>
     <string name="slash">/</string>
+    <string name="register_card">Register Card</string>
     <string name="placeholder_card_phone">Enter Accessible Phone Number</string>
+    <string name="yesterday">Yesterday</string>
 
 
 
