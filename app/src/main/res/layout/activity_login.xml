@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgGrey"
-    tools:context=".login">
+    >
+    <!--tools:context=".login"-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,6 +28,7 @@
             style="@style/formLabel"
             android:text="@string/phone_label" />
         <EditText
+            android:id="@+id/txtMobile"
             style="@style/inputText"
             android:hint="@string/phone_placeholder"
             android:inputType="phone"
@@ -38,12 +40,14 @@
             android:text="@string/password_label" />
 
         <EditText
+            android:id="@+id/txtPassword"
             style="@style/inputText"
             android:hint="@string/phone_placeholder"
             android:inputType="textPassword"
             android:layout_marginBottom="10dp"/>
 
         <Button
+            android:id="@+id/bttnLogin"
             style="@style/submitButton"
             android:text="@string/login"
             android:textColor="@color/white"
@@ -63,6 +67,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/register_new_account" />
             <TextView
+                android:id="@+id/bttnRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/register"
