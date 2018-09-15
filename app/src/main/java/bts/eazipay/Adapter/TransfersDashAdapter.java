@@ -64,7 +64,7 @@ public class TransfersDashAdapter extends BaseAdapter implements Filterable {
 		View vi=convertView;
 	    if(convertView==null){
 	     
-	      vi = inflater.inflate(R.layout.activity_transfersdashboardrows, null);
+	      /*vi = inflater.inflate(R.layout.activity_transfersdashboardrows, null);
 	      holder = new ViewHolder();
 	     
 	      holder.Id = (TextView)vi.findViewById(R.id.tvId); // city name
@@ -74,7 +74,7 @@ public class TransfersDashAdapter extends BaseAdapter implements Filterable {
 	      //holder.txtDateCreated = (TextView)vi.findViewById(R.id.txtBankName);
 	      holder.imgBttnFavHymm=(ImageView)vi.findViewById(R.id.txtMobile);
 	     
-	      vi.setTag(holder);
+	      vi.setTag(holder);*/
 	    }
 	    else{
 	    	

@@ -15,10 +15,10 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-        debug {
+       /* debug {
             applicationIdSuffix ".debug"
             debuggable true
-        }
+        }*/
     }
 }
 

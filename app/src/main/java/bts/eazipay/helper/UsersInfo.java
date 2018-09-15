@@ -13,8 +13,23 @@ public class UsersInfo {
 	    private Boolean HasConfirmedEmail ;
 	    private Boolean  HasConfirmedMobileNo ;
 	    private String EmailVerificationCode ;
-	    private String DateCreated ;
-	    private int CreatedBy ;
+
+	public String getBizName() {
+		return BizName;
+	}
+
+	public void setBizName(String bizName) {
+		BizName = bizName;
+	}
+
+	private String BizName;
+	private String DateCreated ;
+	private int CreatedBy ;
+
+
+
+
+
 		/**
 		 * @return the id
 		 */

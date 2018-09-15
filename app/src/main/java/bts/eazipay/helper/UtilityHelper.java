@@ -31,7 +31,7 @@ public class UtilityHelper {
 
 	public static final String URL_Host ="http://www.mnTracker.com/";
 	public static final String Host_URLResponse ="http://www.eazypayplus.com/PublicFolder/PaymentResponse.aspx";
-	public static final String METHOD_NAME_UsersAdd = "UsersAddNew";
+	public static final String METHOD_NAME_UsersAdd = "UsersAdd";
 	public static final String METHOD_NAME_UsersLoginList = "UsersLoginList";
 
 	public static final String METHOD_UsersLoginList = "UsersLoginList";
