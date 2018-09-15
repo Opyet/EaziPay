@@ -21,9 +21,6 @@ public class HomeScreenActivity extends AppCompatActivity {
         bttnDisbursePay = (ImageView)findViewById(R.id.bttnDisbursePay);
 
 
-        //Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        //setSupportActionBar(myToolbar);
-
         bttnReceivePay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

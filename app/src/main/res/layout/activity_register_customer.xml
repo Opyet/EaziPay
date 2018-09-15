@@ -37,12 +37,24 @@
         android:layout_marginBottom="10dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/formLabel"
-            android:layout_marginLeft="10dp"
-            android:text="@string/card_number"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/formLabel"
+                android:text="@string/card_number"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/border_text"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
         <EditText
             style="@style/inputText"
             android:inputType="number"
@@ -67,7 +79,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/formLabel"
-                android:layout_marginLeft="10dp"
                 android:text="@string/expiry_date"/>
 
             <LinearLayout
@@ -100,7 +111,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/formLabel"
-                android:layout_marginLeft="10dp"
                 android:text="@string/cvv"/>
             <EditText
                 style="@style/inputText"
@@ -119,7 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/formLabel"
-            android:layout_marginLeft="10dp"
+
             android:text="@string/card_holder"/>
         <EditText
             style="@style/inputText"
@@ -137,7 +147,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/formLabel"
-            android:layout_marginLeft="10dp"
             android:text="@string/phone_label"/>
         <EditText
             style="@style/inputText"
@@ -148,7 +157,7 @@
 
     <Button
         style="@style/submitButton"
-        android:text="@string/transfer"
+        android:text="@string/register_card"
         android:background="@color/colorAccent"
         android:textColor="@color/white"
         android:layout_marginTop="10dp"
