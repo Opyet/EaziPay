@@ -23,7 +23,10 @@
                 android:id="@+id/swtInternetMode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"/>
+                android:layout_gravity="right"
+                android:checked="true"
+                android:text="Online Mode"/>
+                android:text="Online Mode"/>
             <!--<TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -38,6 +41,7 @@
             android:layout_gravity="top"
             android:text="@string/product_service"            />
         <EditText
+            android:id="@+id/txtService"
             style="@style/inputText"
             android:hint="@string/placeholder_product_service"
             android:inputType="text"
@@ -49,9 +53,10 @@
             android:text="@string/amount" />
 
         <EditText
+            android:id="@+id/txtAmount"
             style="@style/inputText"
             android:hint="@string/placeholder_amount"
-            android:inputType="textPassword"
+            android:inputType="number"
             android:layout_marginBottom="8dp"/>
 
         <LinearLayout
@@ -59,7 +64,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <!--Bank Input-->
-            <LinearLayout
+            <!--<LinearLayout
                 android:layout_width="match_parent"
                 android:layout_weight="1"
                 android:layout_marginRight="10dp"
@@ -83,7 +88,7 @@
 
             </LinearLayout>
 
-            <!--Account Input-->
+            &lt;!&ndash;Account Input&ndash;&gt;
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_weight="1"
@@ -92,13 +97,18 @@
                 <TextView
                     style="@style/formLabel"
                     android:text="@string/account_type" />
-
-                <EditText
+                <Switch
+                    android:id="@+id/swtAcctType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="Savings Account"/>
+                &lt;!&ndash;<EditText
                     style="@style/inputText"
                     android:hint="@string/savings"
                     android:inputType="textPassword"
-                    android:layout_marginBottom="8dp"/>
-            </LinearLayout>
+                    android:layout_marginBottom="8dp"/>&ndash;&gt;
+            </LinearLayout>-->
         </LinearLayout>
         <!--Phone Input-->
         <TextView
@@ -109,11 +119,12 @@
             android:id="@+id/txtMobileNo"
             style="@style/inputText"
             android:hint="@string/phone_placeholder"
-            android:inputType="textPassword"
+            android:inputType="number"
             android:layout_marginBottom="8dp"/>
 
         <!--Submit-->
         <Button
+            android:id="@+id/bttnContinue"
             style="@style/submitButton"
             android:text="@string/continue_txt"
             android:textColor="@color/white"

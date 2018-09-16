@@ -1,12 +1,16 @@
 package bts.eazipay;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -120,9 +124,10 @@ public class RegisterActivity extends AppCompatActivity {
                                         "Registration",
                                         "Your Registration was Successfull. Close the Box and login.",
                                         AlertMessageBox.AlertMessageBoxIcon.Info);
-                                Intent frmIntent =new Intent();
+                               /* Intent frmIntent =new Intent();
                                 frmIntent.setClass(RegisterActivity.this , OTPDailogActivity.class );
-                                startActivity(frmIntent);
+                                startActivity(frmIntent);*/
+                                ShowPopUpOTPRegistration();
                             }else{
                                 AlertMessageBox.Show(RegisterActivity.this,
                                         "Registration",
@@ -164,5 +169,91 @@ public class RegisterActivity extends AppCompatActivity {
 
 
     }
+
+    private boolean ShowPopUpOTPRegistration() {
+
+        try {
+            //ImageView tempImageView = imageView;
+
+
+            final AlertDialog.Builder imageDialog = new AlertDialog.Builder(this);
+            LayoutInflater inflater = (LayoutInflater) this.getSystemService(this.LAYOUT_INFLATER_SERVICE);
+
+            final View layout = inflater.inflate(R.layout.activity_otpdailog,
+                    (ViewGroup) this.findViewById(R.id.layout_root));
+
+            // Button bttnAuthenticate=(Button)layout.findViewById(R.id.bttnAuthenticate);
+            final EditText txtOTP = (EditText) layout.findViewById(R.id.txtOTP);
+
+
+           /* bttnAuthenticate.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+
+                    String code=txtOTP.getText().toString();
+
+                    if (code.length()<4) {
+                        AlertMessageBox.Show(layout.getContext(),
+                                "OTP",
+                                "Please Enter a Valid OTP.",
+                                AlertMessageBox.AlertMessageBoxIcon.Info);
+                        //dialog.dismiss();
+                        return ;
+                    }
+
+
+
+                }
+            });*/
+            imageDialog.setView(layout);
+
+            imageDialog.setNeutralButton("Close", new DialogInterface.OnClickListener(){
+
+                public void onClick(DialogInterface dialog, int which) {
+
+
+                    dialog.dismiss();
+                }
+
+            });
+
+            imageDialog.setPositiveButton("Continue", new DialogInterface.OnClickListener(){
+
+                public void onClick(DialogInterface dialog, int which) {
+
+                    String code=txtOTP.getText().toString();
+
+                    if (code.length()<4) {
+                        AlertMessageBox.Show(layout.getContext(),
+                                "OTP",
+                                "Please Enter a Valid OTP.",
+                                AlertMessageBox.AlertMessageBoxIcon.Info);
+                        //dialog.dismiss();
+                        return ;
+                    }
+
+                    AlertMessageBox.Show(layout.getContext(),
+                            "Success",
+                            "Transaction was Successful.",
+                            AlertMessageBox.AlertMessageBoxIcon.Info);
+                    dialog.dismiss();
+                }
+
+            });
+
+            imageDialog.create();
+            imageDialog.show();
+            return true;
+
+
+
+
+        } catch (Exception e) {
+            Log.e("ShowPopupRegistration>>", e.getMessage() + e.getStackTrace());
+        }
+        return false;
+    }
+
 
 }

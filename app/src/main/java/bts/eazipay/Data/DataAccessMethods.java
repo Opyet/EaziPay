@@ -129,6 +129,40 @@ public class DataAccessMethods {
 
 	}
 
+	public String VerifyCardDetails(String card_no, String cvv, String expiry_month, String expiry_year
+			,String cardName,String mobileNo)
+	{
+
+		try {
+			SoapObject request = new SoapObject(UtilityHelper.NAMESPACE, UtilityHelper.METHOD_NAME_VerifyCard);
+			//String RegNo, int CampusGistId, Boolean isLiked
+			request.addProperty("cardNo", card_no);
+			request.addProperty("cardcvv", cvv);
+			request.addProperty("expiryMonth", expiry_month);
+			request.addProperty("expiryYear", expiry_year);
+			request.addProperty("cardName", cardName);
+			request.addProperty("mobileNo", mobileNo);
+
+			SoapSerializationEnvelope envelope =
+					new SoapSerializationEnvelope(SoapEnvelope.VER11);
+			envelope. dotNet = true;
+			envelope.setOutputSoapObject(request);
+			HttpTransportSE androidHttpTransport = new HttpTransportSE(UtilityHelper.SERVER_URL,120000);
+			androidHttpTransport.setXmlVersionTag("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+			androidHttpTransport.call(UtilityHelper.NAMESPACE + UtilityHelper.METHOD_NAME_VerifyCard, envelope);
+
+			SoapPrimitive ks = (SoapPrimitive)envelope.getResponse();
+
+			// KvmSerializable ks = (KvmSerializable)envelope.getResponse();
+
+			return ks.toString();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+
+	}
 
 	public String GetTotalChargeable(String amount)
 	{

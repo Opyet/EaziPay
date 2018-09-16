@@ -64,17 +64,16 @@ public class TransfersDashAdapter extends BaseAdapter implements Filterable {
 		View vi=convertView;
 	    if(convertView==null){
 	     
-	      /*vi = inflater.inflate(R.layout.activity_transfersdashboardrows, null);
+	      vi = inflater.inflate(R.layout.listitem_transactionhistory, null);
 	      holder = new ViewHolder();
 	     
-	      holder.Id = (TextView)vi.findViewById(R.id.tvId); // city name
-	      holder.txtAccountNo = (TextView)vi.findViewById(R.id.txtMobile); // city name
-	      //holder.txtAccountName = (TextView)vi.findViewById(R.id.txtBankName); // city weather overview
-	      holder.txtAmount = (TextView)vi.findViewById(R.id.txtMobile);
-	      //holder.txtDateCreated = (TextView)vi.findViewById(R.id.txtBankName);
-	      holder.imgBttnFavHymm=(ImageView)vi.findViewById(R.id.txtMobile);
+	      holder.txtService = (TextView)vi.findViewById(R.id.lblService); // city name
+	      holder.txtTransCode = (TextView)vi.findViewById(R.id.lblTransactionCode); // city weather overview
+	      holder.txtAmount = (TextView)vi.findViewById(R.id.lblAmount);
+	      holder.txtDateCreated = (TextView)vi.findViewById(R.id.lblDate);
+	     // holder.imgBttnFavHymm=(ImageView)vi.findViewById(R.id.txtMobile);
 	     
-	      vi.setTag(holder);*/
+	      vi.setTag(holder);
 	    }
 	    else{
 	    	
@@ -82,9 +81,9 @@ public class TransfersDashAdapter extends BaseAdapter implements Filterable {
 	    }
 
 	      // Setting all values in listview
-	    //  holder.Id.setText(String.valueOf(smartCollectionFiltered.get(position).getId()));
-	      holder.txtAccountNo.setText(smartCollectionFiltered.get(position).getReceiverAccountNo());
-	      holder.txtAccountName.setText(smartCollectionFiltered.get(position).getReceiverAccountName());
+	     holder.txtTransCode.setText(String.valueOf(smartCollectionFiltered.get(position).getTransactionCode()));
+	      holder.txtService.setText(smartCollectionFiltered.get(position).getTransactionDetails());
+	      //holder.txtAccountName.setText(smartCollectionFiltered.get(position).getReceiverAccountName());
 	      String amount=String.valueOf(smartCollectionFiltered.get(position).getAmount());
 	      try {
 	    	  Locale.setDefault(Locale.US);
@@ -125,7 +124,8 @@ public class TransfersDashAdapter extends BaseAdapter implements Filterable {
 	 * */
 	static class ViewHolder{
 		TextView Id;
-		TextView txtAccountNo;
+		TextView txtTransCode;
+		TextView txtService;
 		TextView txtAccountName;
 		TextView txtAmount;
 		TextView txtDateCreated;

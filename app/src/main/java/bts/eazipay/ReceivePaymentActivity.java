@@ -1,11 +1,20 @@
 package bts.eazipay;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -22,17 +31,51 @@ import bts.eazipay.helper.UtilityHelper;
 public class ReceivePaymentActivity extends AppCompatActivity {
     DataBaseCreateHelper db;
     Switch swtInternetMode=null;
+    //Switch swtAcctType=null;
+   //Spinner cmbBanks=null;
+    Button bttnContinue=null;
+    EditText txtAmount=null;
+    EditText txtMobileNo=null;
+
     String tag=this.getClass().getName();
-    Spinner cmbBanks=null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_receive_payment);
 
-        cmbBanks=(Spinner)findViewById(R.id.cmbBanks) ;
+        //cmbBanks=(Spinner)findViewById(R.id.cmbBanks) ;
+        txtAmount=(EditText)findViewById(R.id.txtAmount) ;
+        txtMobileNo=(EditText)findViewById(R.id.txtMobileNo);
+
+        bttnContinue=(Button)findViewById(R.id.bttnContinue) ;
+
+        bttnContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (!swtInternetMode.isChecked() ){
+
+                    String encodedHash = Uri.encode("#");
+                    String uri = "tel: *8472*" + txtAmount.getText().toString() + "*"
+                            + txtMobileNo.getText().toString() + encodedHash ;
+                    Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse(uri));
+                    // startActivityForResult(intent, 2);
+                    startActivity(intent);
+                }else{
+
+                    ShowPopUpOTPRegistration();
+                }
+
+            }
+        });
+
         db=new DataBaseCreateHelper(this);
 
         swtInternetMode=(Switch)findViewById(R.id.swtInternetMode);
+        //swtAcctType=(Switch)findViewById(R.id.swtAcctType);
+
+
 
         swtInternetMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -43,7 +86,7 @@ public class ReceivePaymentActivity extends AppCompatActivity {
                 }else{
                     swtInternetMode.setText("offline Mode");
                     try {
-                        AlertMessageBox.Show(getApplicationContext(),
+                        AlertMessageBox.Show(ReceivePaymentActivity.this,
                                 "Offline Mode",
                                 "Application Would use USSD (*8472***#)",
                                 AlertMessageBox.AlertMessageBoxIcon.Info);
@@ -54,9 +97,22 @@ public class ReceivePaymentActivity extends AppCompatActivity {
                 }
             }
         });
+       /* swtAcctType.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b==true){
+
+                    swtAcctType.setText("Current Account");
+                }else{
+                    swtAcctType.setText("Savings Account");
+
+                }
+            }
+        });
+        LoadBanksOnline();*/
     }
 
-    private void LoadBanksOnline(){
+   /* private void LoadBanksOnline(){
 
         try {
             if (UtilityHelper.hasNetwork(this)) {
@@ -93,7 +149,7 @@ public class ReceivePaymentActivity extends AppCompatActivity {
 
                         }else {
 
-                            Toast.makeText(getApplicationContext(),"Invalid Username or Password", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"Banks Not Setup", Toast.LENGTH_LONG).show();
                         }
                         dialog.hide();
                         dialog.dismiss();
@@ -123,7 +179,7 @@ public class ReceivePaymentActivity extends AppCompatActivity {
 
     }
 
-
+*/
 
     private void VerifyAccountNumber(String acctNumber,String bankCode){
 
@@ -178,6 +234,94 @@ public class ReceivePaymentActivity extends AppCompatActivity {
         }
 
 
+    }
+
+
+
+    private boolean ShowPopUpOTPRegistration() {
+
+        try {
+            //ImageView tempImageView = imageView;
+
+
+            final AlertDialog.Builder imageDialog = new AlertDialog.Builder(this);
+            LayoutInflater inflater = (LayoutInflater) this.getSystemService(this.LAYOUT_INFLATER_SERVICE);
+
+            final View layout = inflater.inflate(R.layout.activity_otpdailog,
+                    (ViewGroup) this.findViewById(R.id.layout_root));
+
+           // Button bttnAuthenticate=(Button)layout.findViewById(R.id.bttnAuthenticate);
+            final EditText txtOTP = (EditText) layout.findViewById(R.id.txtOTP);
+
+
+           /* bttnAuthenticate.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+
+                    String code=txtOTP.getText().toString();
+
+                    if (code.length()<4) {
+                        AlertMessageBox.Show(layout.getContext(),
+                                "OTP",
+                                "Please Enter a Valid OTP.",
+                                AlertMessageBox.AlertMessageBoxIcon.Info);
+                        //dialog.dismiss();
+                        return ;
+                    }
+
+
+
+                }
+            });*/
+            imageDialog.setView(layout);
+
+            imageDialog.setNeutralButton("Close", new DialogInterface.OnClickListener(){
+
+                public void onClick(DialogInterface dialog, int which) {
+
+
+                    dialog.dismiss();
+                }
+
+            });
+
+            imageDialog.setPositiveButton("Continue", new DialogInterface.OnClickListener(){
+
+                public void onClick(DialogInterface dialog, int which) {
+
+                    String code=txtOTP.getText().toString();
+
+                    if (code.length()<4) {
+                        AlertMessageBox.Show(layout.getContext(),
+                                "OTP",
+                                "Please Enter a Valid OTP.",
+                                AlertMessageBox.AlertMessageBoxIcon.Info);
+                        //dialog.dismiss();
+                        return ;
+                    }
+
+                    AlertMessageBox.Show(layout.getContext(),
+                            "Success",
+                            "Transaction was Successful.",
+                            AlertMessageBox.AlertMessageBoxIcon.Info);
+
+                    dialog.dismiss();
+                }
+
+            });
+
+            imageDialog.create();
+            imageDialog.show();
+            return true;
+
+
+
+
+        } catch (Exception e) {
+            Log.e("ShowPopupRegistration>>", e.getMessage() + e.getStackTrace());
+        }
+        return false;
     }
 
 

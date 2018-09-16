@@ -36,6 +36,7 @@ public class UtilityHelper {
 
 	public static final String METHOD_UsersLoginList = "UsersLoginList";
 
+	public static final String METHOD_NAME_VerifyCard = "VerifyCardDetails";
 	public static final String METHOD_NAME_VerifyAccountNumber = "VerifyAccountNumber";
 	public static final String METHOD_NAME_GetTotalChargeable = "GetTotalChargeable";
 	public static final String METHOD_NAME_BanksList = "BanksList";

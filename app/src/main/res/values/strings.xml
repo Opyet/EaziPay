@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EaziPay</string>
+    <string name="app_name">PayEazi</string>
 
     <string name="customer">Customer Signup</string>
     <string name="merchant">Merchant</string>
