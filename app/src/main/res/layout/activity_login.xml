@@ -43,8 +43,7 @@
             android:id="@+id/inputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/colorAccent">
+            app:passwordToggleEnabled="true">
             <EditText
                 android:id="@+id/txtPassword"
                 style="@style/inputText"
@@ -63,6 +62,8 @@
                 android:text="@string/login"
                 android:textColor="@color/white"
                 android:background="@color/colorAccent"
+                android:drawableLeft="@drawable/ic_baseline_lock_open_24px"
+                android:drawablePadding="7dp"
                 android:layout_alignParentRight="true"/>
 
             <!--Register Section-->

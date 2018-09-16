@@ -93,11 +93,18 @@
                     style="@style/formLabel"
                     android:text="@string/account_type" />
 
-                <EditText
-                    style="@style/inputText"
-                    android:hint="@string/savings"
-                    android:inputType="textPassword"
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layoutMode="opticalBounds"
+                    android:saveEnabled="true"
+                    android:paddingTop="2dp"
+                    android:spinnerMode="dialog"
+                    android:nextFocusDown="@+id/txtAccountNo"
+                    android:imeOptions="actionNext"
                     android:layout_marginBottom="8dp"/>
+
             </LinearLayout>
         </LinearLayout>
         <!--Phone Input-->
@@ -109,7 +116,7 @@
             android:id="@+id/txtMobileNo"
             style="@style/inputText"
             android:hint="@string/phone_placeholder"
-            android:inputType="textPassword"
+            android:inputType="phone"
             android:layout_marginBottom="8dp"/>
 
         <!--Submit-->
@@ -118,6 +125,8 @@
             android:text="@string/continue_txt"
             android:textColor="@color/white"
             android:background="@color/colorAccent"
+            android:drawableRight="@drawable/ic_arrow_alt_circle_right"
+            android:drawablePadding="10dp"
             android:layout_marginTop="10dp"
             android:layout_gravity="right"/>
 

@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.CompoundButton;
 import android.widget.Spinner;
 import android.widget.Switch;
@@ -39,9 +40,9 @@ public class ReceivePaymentActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b==true){
 
-                    swtInternetMode.setText("Online Mode");
+                    swtInternetMode.setText("Online");
                 }else{
-                    swtInternetMode.setText("offline Mode");
+                    swtInternetMode.setText("Offline");
                     try {
                         AlertMessageBox.Show(getApplicationContext(),
                                 "Offline Mode",
@@ -179,6 +180,5 @@ public class ReceivePaymentActivity extends AppCompatActivity {
 
 
     }
-
 
 }

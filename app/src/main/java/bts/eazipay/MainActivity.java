@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent frmIntent= new Intent();
-                frmIntent.setClass(getApplicationContext() , HomeScreenActivity.class );
+                frmIntent.setClass(getApplicationContext() , RegisterCustomerActivity.class );
 
                 startActivity(frmIntent);
             }

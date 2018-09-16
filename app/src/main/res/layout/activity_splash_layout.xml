@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     tools:context="bts.eazipay.SplashLayout">
 
-    <ImageView android:id="@+id/splashscreen" android:layout_width="720dp"
+    <ImageView android:id="@+id/splashscreen" android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/launch_screen1"
-        android:layout_gravity="center"/>
+        />
 
 </LinearLayout>

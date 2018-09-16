@@ -30,19 +30,28 @@
         <activity android:name=".RegisterActivity" />
         <activity
             android:name=".HomeScreenActivity"
-            android:label="@string/title_activity_home_screen" />
+            android:label="@string/title_activity_home_screen"/>
         <activity
             android:name=".ReceivePaymentActivity"
-            android:label="@string/receive_payment" />
+            android:label="@string/receive_payment"
+            android:parentActivityName=".HomeScreenActivity"/>
         <activity android:name=".OTPDailogActivity" />
         <activity
             android:name=".SuccessReportActivity"
-            android:label="@string/report" />
+            android:label="@string/report"
+            android:parentActivityName=".HomeScreenActivity"/>
         <activity
             android:name=".FailedReportActivity"
-            android:label="@string/report" />
-        <activity android:name=".DisburseActivity" />
-        <activity android:name=".HistoryActivity" />
+            android:label="@string/report"
+            android:parentActivityName=".HomeScreenActivity"/>
+        <activity
+            android:name=".DisburseActivity"
+            android:label="Disburse Funds"
+            android:parentActivityName=".HomeScreenActivity"/>
+        <activity
+            android:name=".HistoryActivity"
+            android:label="History | Reports"
+            android:parentActivityName=".HomeScreenActivity"/>
         <activity android:name=".RegisterCustomerActivity" />
         <activity android:name=".SplashLayout"
             ></activity>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EaziPay</string>
+    <string name="app_name">PayEazi</string>
 
     <string name="customer">Customer Signup</string>
     <string name="merchant">Merchant</string>
@@ -35,8 +35,9 @@
     <string name="title_activity_login">Sign in</string>
 
     <!--Home Screen-->
-    <string name="welcome_message">Hi Becky!</string>
-    <string name="total_received">Total received</string>
+    <string name="welcome_message_hi">Hi</string>
+    <string name="welcome_message_name">Becky</string>
+    <string name="total_received">Received Today</string>
     <string name="amount_figures">N40,000</string>
     <string name="count">Count: </string>
     <string name="count_number">6</string>
@@ -84,11 +85,11 @@
     <string name="back_to_home">Back to Home</string>
 
     <!--Offline/Online-->
-    <string name="offline">Offline Mode</string>
-    <string name="online">Online Mode</string>
+    <string name="offline">Offline</string>
+    <string name="online">Online</string>
 
     <!--Disburse Screen-->
-    <string name="total_balance">Balance</string>
+    <string name="total_balance">Wallet Balance</string>
     <string name="transfer">Transfer</string>
     <string name="account_number">Account Number</string>
     <string name="account_name">Account Name:</string>
@@ -101,7 +102,7 @@
     <string name="placeholder_card_holder">Enter Name On Card</string>
     <string name="expiry_date">VALID UNTIL:</string>
     <string name="cvv">CVV</string>
-    <string name="placeholder_cvv">xxx</string>
+    <string name="placeholder_cvv">XXX</string>
     <string name="last_three">Last three digit on your card\'s backside</string>
     <string name="phone_validation_message">This phone number will be used for validating your registration</string>
     <string name="card_month">MM</string>
@@ -110,7 +111,8 @@
     <string name="register_card">Register Card</string>
     <string name="placeholder_card_phone">Enter Accessible Phone Number</string>
     <string name="yesterday">Yesterday</string>
-
+    <string name="card_validated">Card Validated</string>
+    <string name="invalid_card">Invalid Card</string>
     <string name="this_week">This Week</string>
 
 </resources>
