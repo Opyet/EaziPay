@@ -76,7 +76,7 @@
         <EditText
             android:id="@+id/txtMobileNo"
             style="@style/inputText"
-            android:hint="@string/placeholder_mobile_no"
+            android:hint="@string/placeholder_card_phone"
             android:inputType="number"
             android:layout_marginBottom="8dp"/>
 

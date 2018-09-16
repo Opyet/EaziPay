@@ -109,7 +109,7 @@
     <string name="card_year">YY</string>
     <string name="slash">/</string>
     <string name="register_card">Register Card</string>
-    <string name="placeholder_card_phone">Enter Accessible Phone Number</string>
+    <string name="placeholder_card_phone">Enter Account Phone No</string>
     <string name="yesterday">Yesterday</string>
     <string name="card_validated">Card Validated</string>
     <string name="invalid_card">Invalid Card</string>
