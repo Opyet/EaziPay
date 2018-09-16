@@ -25,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView bttnRegister =null;
     EditText txtMobile=null;
     EditText txtPassword=null;
+    String tag=getClass().getName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent frmIntent= new Intent();
-                frmIntent.setClass(getApplicationContext() , RegisterActivity.class );
+                frmIntent.setClass(LoginActivity.this , RegisterActivity.class );
 
                 startActivity(frmIntent);
             }
@@ -56,6 +57,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         return;
                     }*/
+
                     ///TODO
                     Intent frmIntent =new Intent();
                     frmIntent.setClass(LoginActivity.this , HomeScreenActivity.class );
@@ -68,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
                    // LoginUserOnline(view,mobile,pwd);
                 } catch (Exception e)
                 {
-                    Log.e("", e.getMessage() + e.getStackTrace());
+                    Log.e(tag, e.getMessage() + e.getStackTrace());
 
                 }
 

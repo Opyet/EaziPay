@@ -430,16 +430,16 @@ public class DataAccessMethods {
 					UtilityHelper.METHOD_NAME_UsersAdd);
 
 			request.addProperty("hosturl", UtilityHelper.URL_Host);
-			request.addProperty("Username", bd.getUsername());
+			request.addProperty("Surname",bd.getSurname());
+			request.addProperty("Othernames", bd.getOthernames());
 			request.addProperty("Email", bd.getEmail());
 			request.addProperty("MobileNo", bd.getMobileNo());
 			request.addProperty("PassCode", bd.getPassCode());
-			request.addProperty("Surname",bd.getSurname());
-			request.addProperty("Firstname", bd.getFirstname());
-			request.addProperty("Othernames", bd.getOthernames());
-			request.addProperty("IsActive",bd.getIsActive());
-			request.addProperty("CreatedBy", "1");
+
+			//request.addProperty("IsActive",bd.getIsActive());
 			request.addProperty("MobileOrWeb","mobile");
+			request.addProperty("BizName", bd.getBizName());
+
 
 			SoapSerializationEnvelope envelope =
 					new SoapSerializationEnvelope(SoapEnvelope.VER11);
