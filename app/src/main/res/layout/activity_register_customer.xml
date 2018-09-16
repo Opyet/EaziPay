@@ -20,15 +20,15 @@
             android:src="@drawable/ic_check_circle"/>
         <TextView
             android:id="@+id/card_valid_msg"
-            android:layout_toRightOf="@id/card_valid_icon"
+            android:layout_toEndOf="@id/card_valid_icon"
             android:layout_centerVertical="true"
             android:textStyle="bold"
             android:textColor="@color/textLightGrey"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/card_validated"
-            android:textSize="25dp"
+            android:textSize="25sp"
             />
     </RelativeLayout>
 
@@ -49,14 +49,14 @@
         <ImageView
             android:layout_weight="1"
             android:layout_width="46dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:layout_height="30dp"
-            android:src="@drawable/MASTER"
+            android:src="@drawable/master"
             android:padding="3dp"
             android:background="@drawable/card_border"/>
         <ImageView
             android:layout_weight="1"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:layout_width="55dp"
             android:layout_height="30dp"
             android:src="@drawable/verve"
@@ -90,6 +90,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:baselineAligned="false"
         android:layout_width="match_parent"
         android:layout_marginBottom="10dp"
         android:layout_height="wrap_content"
@@ -131,7 +132,7 @@
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="-20dp"
+            android:layout_marginStart="-20dp"
             android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
@@ -187,8 +188,8 @@
         android:text="@string/register_card"
         android:background="@color/colorAccent"
         android:textColor="@color/white"
-        android:drawableLeft="@drawable/ic_credit_card"
+        android:drawableStart="@drawable/ic_credit_card"
         android:drawablePadding="10dp"
         android:layout_marginTop="10dp"
-        android:layout_gravity="right"/>
+        android:layout_gravity="end"/>
 </LinearLayout>
