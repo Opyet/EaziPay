@@ -56,7 +56,6 @@
         </RelativeLayout>
 
         <EditText
-            android:id="@+id/txtCardNo"
             style="@style/inputText"
             android:inputType="number"
             android:hint="@string/placeholder_card_number"
@@ -87,21 +86,17 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <EditText
-                    android:id="@+id/txtExpMonth"
                     style="@style/inputText"
                     android:inputType="number"
-                    android:maxLength="2"
                     android:hint="@string/card_month"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/slash"/>
                 <EditText
-                    android:id="@+id/txtExpYear"
                     style="@style/inputText"
                     android:inputType="number"
                     android:hint="@string/card_year"
-                    android:maxLength="2"
                     android:padding="10dp"/>
             </LinearLayout>
         </LinearLayout>
@@ -113,19 +108,14 @@
             android:layout_marginLeft="-20dp"
             android:orientation="vertical">
             <TextView
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/formLabel"
-
                 android:text="@string/cvv"/>
             <EditText
-                android:id="@+id/txtCVV"
                 style="@style/inputText"
-                android:inputType="numberPassword"
-                android:hint="@string/placeholder_cvv"
-                android:maxLength="3"
-                />
+                android:inputType="number"
+                android:hint="@string/placeholder_cvv"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -142,9 +132,8 @@
 
             android:text="@string/card_holder"/>
         <EditText
-            android:id="@+id/txtCardName"
             style="@style/inputText"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:hint="@string/placeholder_card_holder"
             android:padding="10dp"/>
     </LinearLayout>
@@ -160,7 +149,6 @@
             style="@style/formLabel"
             android:text="@string/phone_label"/>
         <EditText
-            android:id="@+id/txtMobileNo"
             style="@style/inputText"
             android:inputType="number"
             android:hint="@string/placeholder_card_phone"
@@ -168,7 +156,6 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/bttnRegister"
         style="@style/submitButton"
         android:text="@string/register_card"
         android:background="@color/colorAccent"

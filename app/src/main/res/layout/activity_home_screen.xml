@@ -159,7 +159,6 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/bttnReport"
             style="@style/submitButton"
             android:text="@string/view_reports"
             android:layout_gravity="center"
