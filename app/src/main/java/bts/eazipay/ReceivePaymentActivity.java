@@ -41,6 +41,7 @@ public class ReceivePaymentActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_receive_payment);
 
@@ -84,7 +85,7 @@ public class ReceivePaymentActivity extends AppCompatActivity {
 
                     swtInternetMode.setText("Online Mode");
                 }else{
-                    swtInternetMode.setText("offline Mode");
+                    swtInternetMode.setText("Offline Mode");
                     try {
                         AlertMessageBox.Show(ReceivePaymentActivity.this,
                                 "Offline Mode",

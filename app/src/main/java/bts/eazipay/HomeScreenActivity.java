@@ -18,6 +18,7 @@ public class HomeScreenActivity extends AppCompatActivity {
     Button view_reports_button=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 

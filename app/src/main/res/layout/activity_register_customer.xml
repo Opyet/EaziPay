@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+
     android:padding="30dp"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -87,9 +88,13 @@
         <EditText
             android:id="@+id/txtCardNo"
             style="@style/inputText"
+            android:maxLength="20"
+            android:imeOptions="actionNext"
             android:inputType="number"
             android:hint="@string/placeholder_card_number"
-            android:padding="10dp"/>
+            android:padding="10dp"
+            android:nextFocusDown="@id/txtExpMonth"
+            />
 
     </LinearLayout>
 
@@ -120,6 +125,9 @@
                     android:id="@+id/txtExpMonth"
                     style="@style/inputText"
                     android:inputType="number"
+                    android:maxLength="2"
+                    android:imeOptions="actionNext"
+                    android:nextFocusForward="@id/txtExpYear"
                     android:hint="@string/card_month"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -129,7 +137,10 @@
                     android:id="@+id/txtExpYear"
                     style="@style/inputText"
                     android:inputType="number"
+                    android:maxLength="2"
+                    android:imeOptions="actionNext"
                     android:hint="@string/card_year"
+                    android:nextFocusForward="@id/txtCVV"
                     android:padding="10dp"/>
             </LinearLayout>
         </LinearLayout>
@@ -148,7 +159,10 @@
             <EditText
                 android:id="@+id/txtCVV"
                 style="@style/inputText"
+                android:maxLength="3"
+                android:imeOptions="actionNext"
                 android:inputType="numberPassword"
+                android:nextFocusForward="@id/txtCardName"
                 android:hint="@string/placeholder_cvv"/>
         </LinearLayout>
 
@@ -170,6 +184,9 @@
             style="@style/inputText"
             android:textAllCaps="true"
             android:inputType="text"
+            android:imeOptions="actionNext"
+            android:maxLength="50"
+            android:nextFocusForward="@id/txtMobileNo"
             android:hint="@string/placeholder_card_holder"
             android:padding="10dp"/>
     </LinearLayout>
@@ -187,6 +204,7 @@
         <EditText
             android:id="@+id/txtMobileNo"
             style="@style/inputText"
+            android:maxLength="11"
             android:inputType="number"
             android:hint="@string/placeholder_card_phone"
             android:padding="10dp"/>
@@ -196,6 +214,8 @@
         android:id="@+id/bttnRegister"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
         android:text="@string/register_card"
         android:background="@color/colorAccent"
         android:textColor="@color/white"

@@ -34,6 +34,7 @@ public class RegisterActivity extends AppCompatActivity {
     Button bttnRegister=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 

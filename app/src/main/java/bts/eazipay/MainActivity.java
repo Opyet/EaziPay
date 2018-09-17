@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     RelativeLayout bttnMerchant =null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bttnCustomer = (LinearLayout)findViewById(R.id.bttnCustomer);

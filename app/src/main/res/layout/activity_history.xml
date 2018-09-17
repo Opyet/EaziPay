@@ -5,13 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
     tools:context=".HistoryActivity">
-    <LinearLayout
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="170dp"
-        android:background="@color/colorAccent2"
+        android:background="@color/white"
+        android:src="@drawable/sales_chart_small_1x"
         >
-    </LinearLayout>
+    </ImageView>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -36,6 +38,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Enter Transaction ID"
                 android:inputType="text"
+                android:focusable="false"
                 android:textAllCaps="true"
                 android:textColor="@android:color/darker_gray"
                 android:background="@color/white"  >
